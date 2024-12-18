@@ -1,0 +1,8 @@
+C:\Users\utsab\source\repos\ExpenseWise\ExpenseWise\wwwroot\css\bootstrap\bootstrap.min.css.map
+C:\Users\utsab\source\repos\ExpenseWise\ExpenseWise\wwwroot\index.html
+C:\Users\utsab\source\repos\ExpenseWise\ExpenseWise\wwwroot\css\app.css
+C:\Users\utsab\source\repos\ExpenseWise\ExpenseWise\wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\app.css
+wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\index.html
