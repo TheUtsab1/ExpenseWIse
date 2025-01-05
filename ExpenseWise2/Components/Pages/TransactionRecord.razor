@@ -1,0 +1,127 @@
+﻿@page "/TransactionRecord"
+@using System.Text.Json
+@inject NavigationManager Navigation
+@* <FinanceManager.Components.Layout.NavMenu /> *@
+
+<h3>Transaction Records</h3>
+
+@if (transactions != null && transactions.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Transaction Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transaction in transactions)
+            {
+                <tr>
+                    <td>@transaction.TransactionType</td>
+                    <td>@transaction.Amount</td>
+                    <td>@transaction.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@transaction.Note</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No transactions found.</p>
+}
+
+<style>
+    h3 {
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    .table th, .table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .table-striped tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: #666;
+    }
+</style>
+
+@code {
+    private List<Transaction> transactions = new List<Transaction>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Load the transactions when the page initializes
+        await LoadTransactions();
+    }
+
+    private async Task LoadTransactions()
+    {
+        try
+        {
+            // Get the desktop path of the current user
+            var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            // Define the file path where the JSON is saved
+            var filePath = Path.Combine(desktopPath, "FinanceTransactions", "transactions.json");
+
+            // Log file path for debugging
+            Console.WriteLine($"Looking for transactions file at: {filePath}");
+
+            if (File.Exists(filePath))
+            {   
+                // Read the existing transactions from the file
+                string existingJson = await File.ReadAllTextAsync(filePath);
+
+                // Log the contents of the file for debugging
+                Console.WriteLine($"File content: {existingJson}");
+
+                // Deserialize the content into a list of transactions
+                transactions = JsonSerializer.Deserialize<List<Transaction>>(existingJson) ?? new List<Transaction>();
+
+                // Log the deserialized transactions for debugging
+                Console.WriteLine($"Transactions loaded: {transactions.Count}");
+            }
+            else
+            {
+                Console.WriteLine("Transactions file not found.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading transactions: {ex.Message}");
+        }
+    }
+
+    public class Transaction
+    {
+        public string TransactionType { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
+        public string Note { get; set; }
+    }
+}

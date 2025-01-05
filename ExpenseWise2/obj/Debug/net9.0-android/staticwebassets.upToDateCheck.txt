@@ -1,0 +1,8 @@
+C:\Users\utsab\OneDrive\Desktop\ExpenseWise\ExpenseWise\ExpenseWise2\wwwroot\css\bootstrap\bootstrap.min.css.map
+C:\Users\utsab\OneDrive\Desktop\ExpenseWise\ExpenseWise\ExpenseWise2\wwwroot\index.html
+C:\Users\utsab\OneDrive\Desktop\ExpenseWise\ExpenseWise\ExpenseWise2\wwwroot\css\app.css
+C:\Users\utsab\OneDrive\Desktop\ExpenseWise\ExpenseWise\ExpenseWise2\wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\app.css
+wwwroot\css\bootstrap\bootstrap.min.css
+wwwroot\css\bootstrap\bootstrap.min.css.map
+wwwroot\index.html

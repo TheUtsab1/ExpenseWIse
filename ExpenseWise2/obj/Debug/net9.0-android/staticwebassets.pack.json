@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise2\\obj\\Debug\\net9.0-android\\scopedcss\\bundle\\ExpenseWise2.styles.css",
+      "PackagePath": "staticwebassets\\ExpenseWise2.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise2\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise2\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise2\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise2\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.ExpenseWise2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.ExpenseWise2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.build.ExpenseWise2.props",
+      "PackagePath": "build\\ExpenseWise2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.buildMultiTargeting.ExpenseWise2.props",
+      "PackagePath": "buildMultiTargeting\\ExpenseWise2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0-android\\staticwebassets\\msbuild.buildTransitive.ExpenseWise2.props",
+      "PackagePath": "buildTransitive\\ExpenseWise2.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

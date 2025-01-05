@@ -1,0 +1,114 @@
+﻿@page "/"
+
+<div class="dashboard-container">
+
+    <div class="content">
+        <h2>Dashboard</h2>
+        <p>Your Total Inflows: Rs. XXXX</p>
+        <p>Your Total Outflows: Rs. XXXX</p>
+        <p>Your Total Debts: Rs. XXXX</p>
+        <p>Your Pending Debt: Rs. XXXX</p>
+        <p>Your Top 5 Transactions:</p>
+
+        <table class="transactions-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12-13-2024</td>
+                    <td>Salary</td>
+                    <td>Inflow</td>
+                    <td>Rs. 3500</td>
+                    <td>Monthly Salary</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="filter-section">
+            <label for="filter-date">Filter by date:</label>
+            <input type="date" id="filter-date" name="filter-date" />
+            <button class="apply-filter-button">Apply Filter</button>
+        </div>
+
+        <p class="note">Note: You have Rs. 0 debt this month.</p>
+    </div>
+</div>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #002db3;
+        color: white;
+    }
+
+    .dashboard-container {
+        display: flex;
+        height: 100vh;
+    }
+
+
+    .menu-button {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        background-color: white;
+        color: black;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+    }
+
+        .menu-button.active {
+            background-color: gray;
+            color: white;
+        }
+
+    .content {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .transactions-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+    }
+
+        .transactions-table th, .transactions-table td {
+            border: 1px solid white;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .transactions-table th {
+            background-color: #001a66;
+        }
+
+    .filter-section {
+        margin: 1rem 0;
+    }
+
+    .apply-filter-button {
+        padding: 0.5rem 1rem;
+        background-color: #878787;
+        color: black;
+        border: none;
+        cursor: pointer;
+    }
+
+    .note {
+        font-style: italic;
+        margin-top: 1rem;
+    }
+
+</style>

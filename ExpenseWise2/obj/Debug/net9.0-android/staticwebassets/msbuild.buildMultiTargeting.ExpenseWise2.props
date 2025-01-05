@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ExpenseWise2.props" />
+</Project>

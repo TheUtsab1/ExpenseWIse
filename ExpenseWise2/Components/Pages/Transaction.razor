@@ -1,0 +1,287 @@
+﻿@page "/transaction"
+
+<h1>Add Transaction</h1>
+
+<form>
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter title">
+    </div>
+    <div class="form-group">
+        <label for="type">Type:</label>
+        <input type="text" class="form-control" id="type" placeholder="Enter type">
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" class="form-control" id="amount" placeholder="Enter amount">
+    </div>
+    <div class="form-group">
+        <label for="tags">Tag</label>
+        <select class="form-control" id="tag">
+            <option value="1">Yearly</option>
+            <option value="2">Monthly</option>
+            <option value="3">Food</option>
+            <option value="4">Drinks</option>
+            <option value="5">Clothes</option>
+            <option value="6">Gadgets</option>
+            <option value="7">Miscellaneous</option>
+            <option value="8">Fuel</option>
+            <option value="9">Rent</option>
+            <option value="10">EMI</option>
+            <option value="11">Party</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="notes">Notes:</label>
+        <textarea class="form-control" id="notes" rows="3" placeholder="Enter notes"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Transaction</button>
+</form>
+
+<style>
+    body {
+        background-color: #002db3;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .btn-primary {
+        background-color: #878787;
+        border-color: black;
+    }
+
+    h1 {
+        color: white;
+    }
+</style>
+
+@* @page "/transaction" *@
+@* @using System.Text.Json *@
+@* @using ExpenseWise2.Model; *@
+
+@* <h1>Add Transaction</h1> *@
+
+@* <form> *@
+@*     <div class="form-group"> *@
+@*         <label for="title">Title:</label> *@
+@*         <input type="text" class="form-control" id="title" placeholder="Enter title"> *@
+@*     </div> *@
+@*     <div class="form-group"> *@
+@*         <label for="type">Type:</label> *@
+@*         <input type="text" class="form-control" id="type" placeholder="Enter type"> *@
+@*     </div> *@
+@*     <div class="form-group"> *@
+@*         <label for="amount">Amount:</label> *@
+@*         <input type="number" class="form-control" id="amount" placeholder="Enter amount"> *@
+@*     </div> *@
+@*     <div class="form-group"> *@
+@*         <label for="tags">Tags:</label> *@
+@*         <input type="text" class="form-control" id="tags" placeholder="Enter tags"> *@
+@*     </div> *@
+@*     <div class="form-group"> *@
+@*         <label for="notes">Notes:</label> *@
+@*         <textarea class="form-control" id="notes" rows="3" placeholder="Enter notes"></textarea> *@
+@*     </div> *@
+@*     <button type="submit" class="btn btn-primary">Add Transaction</button> *@
+@* </form> *@
+
+@* <style> *@
+@*     body { *@
+@*         background-color: #0066ff; *@
+@*     } *@
+
+@*     .form-group { *@
+@*         margin-bottom: 1rem; *@
+@*     } *@
+
+@*     .form-control { *@
+@*         border-radius: 5px; *@
+@*     } *@
+
+@*     .btn-primary { *@
+@*         background-color: #007bff; *@
+@*         border-color: #007bff; *@
+@*     } *@
+
+@*     h1 { *@
+@*         color: white; *@
+@*     } *@
+@* </style> *@
+
+@* @code { *@
+@*     private Transaction transaction = new Transaction(); *@
+@*     private string message = "Transaction has not been saved yet."; *@
+
+@*     private async Task HandleValidSubmit() *@
+@*     { *@
+@*         Console.WriteLine($"Transaction Saved: {transaction.TransactionType} - {transaction.Amount}"); *@
+
+@*         CreateDirectoryOnDesktop(); *@
+@*         await AddTransactionToFile(transaction); *@
+@*         await Task.Delay(500); // Simulate delay *@
+
+@*         transaction = new Transaction(); *@
+@*     } *@
+
+@*     private void CreateDirectoryOnDesktop() *@
+@*     { *@
+@*         try *@
+@*         { *@
+@*             var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); *@
+@*             var directoryPath = Path.Combine(desktopPath, "FinanceTransactions"); *@
+
+@*             if (!Directory.Exists(directoryPath)) *@
+@*             { *@
+@*                 Directory.CreateDirectory(directoryPath); *@
+@*                 message = $"Directory created at: {directoryPath}"; *@
+@*             } *@
+@*             else *@
+@*             { *@
+@*                 message = $"Directory already exists at: {directoryPath}"; *@
+@*             } *@
+@*         } *@
+@*         catch (Exception ex) *@
+@*         { *@
+@*             message = $"Error creating directory: {ex.Message}"; *@
+@*         } *@
+@*     } *@
+
+@*     private async Task AddTransactionToFile(Transaction newTransaction) *@
+@*     { *@
+@*         try *@
+@*         { *@
+@*             var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); *@
+@*             var filePath = Path.Combine(desktopPath, "FinanceTransactions", "transactions.json"); *@
+
+@*             List<Transaction> transactions = new List<Transaction>(); *@
+
+@*             if (File.Exists(filePath)) *@
+@*             { *@
+@*                 string existingJson = await File.ReadAllTextAsync(filePath); *@
+@*                 transactions = JsonSerializer.Deserialize<List<Transaction>>(existingJson) ?? new List<Transaction>(); *@
+@*             } *@
+
+@*             transactions.Add(newTransaction); *@
+
+@*             string updatedJson = JsonSerializer.Serialize(transactions, new JsonSerializerOptions { WriteIndented = true }); *@
+@*             await File.WriteAllTextAsync(filePath, updatedJson); *@
+
+@*             message = $"Transaction saved to: {filePath}"; *@
+@*         } *@
+@*         catch (Exception ex) *@
+@*         { *@
+@*             message = $"Error saving transaction to file: {ex.Message}"; *@
+@*         } *@
+@*     } *@
+@* } *@
+
+
+
+
+
+@* @page "/transaction" *@
+@* @using System.Text.Json; *@
+@* @using ExpenseWise2.Components.Model; *@
+
+
+@* <div class="form-container"> *@
+@*     <h2>Add Income</h2> *@
+@*     <form id="add-income-form" @onsubmit="HandleSubmit"> *@
+@*         <div class="input-group"> *@
+@*             <label for="amount">Amount</label> *@
+@*             <input type="number" id="amount" @bind="incomeTransaction.Amount" placeholder="Enter amount" required /> *@
+@*         </div> *@
+
+
+
+@*         <div class="input-group"> *@
+@*             <label for="transaction-date">Transaction Date</label> *@
+@*             <input type="date" id="transaction-date" @bind="incomeTransaction.TransactionDate" required /> *@
+@*         </div> *@
+
+@*         <div class="input-group"> *@
+@*             <label for="tag">Category</label> *@
+@*             <select id="tag" @bind="incomeTransaction.TagID" required> *@
+@*                 <option value="1">Salary</option> *@
+@*                 <option value="2">Business</option> *@
+@*                 <option value="3">Freelance</option> *@
+@*                 <option value="4">Investment</option> *@
+@*                 <option value="5">Other</option> *@
+@*             </select> *@
+@*         </div> *@
+
+@*         <div class="input-group"> *@
+@*             <label for="remarks">Remarks</label> *@
+@*             <textarea id="remarks" @bind="incomeTransaction.Remarks" placeholder="Add any details..."></textarea> *@
+@*         </div> *@
+
+@*         <button type="submit" class="btn-primary">Add Income</button> *@
+@*     </form> *@
+@* </div> *@
+
+@* @code { *@
+@*     private Transaction incomeTransaction = new Transaction(); *@
+@*     private List<Transaction> income = new List<Transaction>(); *@
+
+@*     private async Task HandleSubmit() *@
+@*     { *@
+@*         if (incomeTransaction != null) *@
+@*         { *@
+@*             income.Add(new Transaction *@
+@*                 { *@
+@*                     Amount = incomeTransaction.Amount, *@
+@*                     Type = incomeTransaction.Type, *@
+@*                     TransactionDate = incomeTransaction.TransactionDate, *@
+@*                     TagID = incomeTransaction.TagID, *@
+@*                     Remarks = incomeTransaction.Remarks *@
+@*                 }); *@
+
+@*             await SaveIncomeTransactionToFileAsync(); *@
+@*             ResetForm(); *@
+@*         } *@
+@*     } *@
+
+@*     private void ResetForm() *@
+@*     { *@
+@*         incomeTransaction = new Transaction { Type = "Credit" }; *@
+@*     } *@
+
+@*     private async Task SaveIncomeTransactionToFileAsync() *@
+@*     { *@
+@*         try *@
+@*         { *@
+@*             var json = JsonSerializer.Serialize(income); *@
+@*             var path = Path.Combine(FileSystem.AppDataDirectory, "income.json"); *@
+@*             await File.WriteAllTextAsync(path, json); *@
+@*         } *@
+@*         catch (Exception ex) *@
+@*         { *@
+@*             Console.WriteLine($"Error saving file: {ex.Message}"); *@
+@*         } *@
+@*     } *@
+
+@*     protected override async Task OnInitializedAsync() *@
+@*     { *@
+@*         try *@
+@*         { *@
+@*             var path = Path.Combine(FileSystem.AppDataDirectory, "income.json"); *@
+@*             if (File.Exists(path)) *@
+@*             { *@
+@*                 var json = await File.ReadAllTextAsync(path); *@
+@*                 income = JsonSerializer.Deserialize<List<Transaction>>(json) ?? new List<Transaction>(); *@
+@*             } *@
+@*         } *@
+@*         catch (Exception ex) *@
+@*         { *@
+@*             Console.WriteLine($"Error loading file: {ex.Message}"); *@
+@*         } *@
+
+@*         incomeTransaction.Type = "Credit"; *@
+@*     } *@
+@* } *@
