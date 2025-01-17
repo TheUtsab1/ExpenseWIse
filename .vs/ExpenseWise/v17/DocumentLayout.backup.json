@@ -1,0 +1,452 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ExpenseWise\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\transaction.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\transaction.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\signup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\signup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\debt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\debt.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\wwwroot\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\wwwroot\\build.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\wwwroot\\build.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\income.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\income.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\utilities\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\utilities\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\expenses.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\expenses.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\platforms\\windows\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\platforms\\windows\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\income.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\components\\pages\\debt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\components\\pages\\debt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|c:\\users\\utsab\\onedrive\\desktop\\expensewise\\expensewise\\expensewise\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8D85F278-9D3D-4D26-A4CA-9B25467541B2}|ExpenseWise\\ExpenseWise.csproj|solutionrelative:expensewise\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "ExpenseWise\\obj\\Debug\\net9.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwEQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T03:25:10.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Signup.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Signup.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Signup.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Signup.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Signup.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T03:22:08.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T03:17:47.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\MainPage.xaml.cs",
+              "RelativeToolTip": "ExpenseWise\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T03:16:25.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\App.xaml.cs",
+              "RelativeToolTip": "ExpenseWise\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T03:15:38.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\App.xaml",
+              "RelativeDocumentMoniker": "ExpenseWise\\App.xaml",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\App.xaml",
+              "RelativeToolTip": "ExpenseWise\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T03:15:09.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\MainPage.xaml",
+              "RelativeDocumentMoniker": "ExpenseWise\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\MainPage.xaml",
+              "RelativeToolTip": "ExpenseWise\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-04T14:28:03.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\MauiProgram.cs",
+              "RelativeToolTip": "ExpenseWise\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T17:24:43.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Routes.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T13:57:36.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Transaction.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Transaction.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Transaction.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Transaction.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Transaction.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T02:02:33.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Dashboard.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Dashboard.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Dashboard.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Dashboard.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Dashboard.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T02:02:48.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Debt.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Debt.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Debt.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Debt.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Debt.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T02:02:59.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\wwwroot\\css\\styles.css",
+              "RelativeDocumentMoniker": "ExpenseWise\\wwwroot\\css\\styles.css",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\wwwroot\\css\\styles.css",
+              "RelativeToolTip": "ExpenseWise\\wwwroot\\css\\styles.css",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-05T03:14:14.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "build.css",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\wwwroot\\build.css",
+              "RelativeDocumentMoniker": "ExpenseWise\\wwwroot\\build.css",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\wwwroot\\build.css",
+              "RelativeToolTip": "ExpenseWise\\wwwroot\\build.css",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-05T03:07:38.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Income.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Income.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Income.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Income.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Income.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T14:14:19.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Utils.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Utilities\\Utils.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Utilities\\Utils.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Utilities\\Utils.cs",
+              "RelativeToolTip": "ExpenseWise\\Components\\Utilities\\Utils.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T15:43:57.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\_Imports.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T14:26:23.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Expenses.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Expenses.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Expenses.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Expenses.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Expenses.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T14:13:55.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T14:28:44.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "ExpenseWise\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-28T06:20:35.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Transaction.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Transaction.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Transaction.cs",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:16:31.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Income.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Income.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Income.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Income.cs",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Income.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:16:03.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Platforms\\Windows\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\Platforms\\Windows\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Platforms\\Windows\\App.xaml.cs",
+              "RelativeToolTip": "ExpenseWise\\Platforms\\Windows\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T17:27:42.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Expenses.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Expenses.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Expenses.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Expenses.cs",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Expenses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:15:47.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Debt.cs",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Debt.cs",
+              "RelativeDocumentMoniker": "ExpenseWise\\Components\\Pages\\Debt.cs",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\Components\\Pages\\Debt.cs",
+              "RelativeToolTip": "ExpenseWise\\Components\\Pages\\Debt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T17:22:54.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "ExpenseWise\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\utsab\\OneDrive\\Desktop\\ExpenseWise\\ExpenseWise\\ExpenseWise\\wwwroot\\index.html",
+              "RelativeToolTip": "ExpenseWise\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-01-04T15:47:16.511Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

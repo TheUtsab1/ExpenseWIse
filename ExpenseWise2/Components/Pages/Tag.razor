@@ -1,0 +1,80 @@
+﻿@page "/tag"
+
+@using System.Diagnostics
+
+
+<body>
+    <div class="container mt-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Manage Tags</h5>
+                <form class="row g-3" @onsubmit="AddNewTag">
+                    <div class="col-8">
+                        <input type="text" class="form-control" @bind="newTag" placeholder="Add a tag" required>
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary w-100">Add</button>
+                    </div>
+                </form>
+                <div class="mt-3">
+                    <div class="d-flex flex-wrap gap-2">
+                        @if (tagsList.Any())
+                        {
+                            @foreach (var tag in tagsList)
+                            {
+                                <span class="badge bg-light text-dark border d-flex align-items-center">
+                                    @tag.Name
+                                    <button type="button" class="btn-close" aria-label="Remove" @onclick="() => RemoveTag(tag.Name)"></button>
+                                </span>
+                            }
+                        }
+                        else
+                        {
+                            <span>No tags available.</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+@code {
+    private string newTag;
+    private List<TagModel> tagsList = new();
+
+    // Load tags on component initialization
+    protected override void OnInitialized()
+    {
+        LoadTagsAsync();
+        foreach (var each in tagsList)
+        {
+            Debug.WriteLine(each);
+        }
+    }
+
+    // Method to add a new tag
+    private void AddNewTag()
+    {
+        if (!string.IsNullOrWhiteSpace(newTag))
+        {
+            var tag = new TagModel { Name = newTag };
+            TagService.AddTag(tag); // Add the tag using the service
+            LoadTagsAsync(); // Refresh the tag list
+            newTag = string.Empty; // Clear the input
+        }
+    }
+
+    // Method to remove an existing tag
+    private void RemoveTag(string tagName)
+    {
+        TagService.RemoveTag(tagName); // Remove the tag using the service
+        LoadTagsAsync(); // Refresh the tag list
+    }
+
+    // Method to load all tags
+    private void LoadTagsAsync()
+    {
+        tagsList = TagService.GetTags(); // Retrieve all tags from the service
+    }
+}

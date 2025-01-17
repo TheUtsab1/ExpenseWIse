@@ -1,0 +1,147 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    width: 100%; /* Change from max-width to 100% */
+    background-color: #002db3;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 0; /* Ensure no margin around the container */
+}
+
+h1, h2, h3, h4 {
+    color: black;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Summary Cards */
+.dashboard-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #f8d7da;
+    color: black;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+    }
+
+    .card p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+/* Filter Section */
+.card-body .row .form-control,
+.card-body .row .form-select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+    .card-body .row .form-control:focus,
+    .card-body .row .form-select:focus {
+        border-color: #002db3;
+        box-shadow: 0 0 5px rgba(0, 45, 179, 0.5);
+        outline: none;
+    }
+
+/* Transaction Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+    .table thead {
+        background-color: #f8d7da;
+        color: black;
+    }
+
+    .table th,
+    .table td {
+        text-align: left;
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid #dddddd;
+        font-size: 0.9rem;
+        color: black;
+        border: 2px solid black;
+    }
+
+    .table th {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .table td:first-child {
+        font-weight: bold;
+        color: black;
+    }
+
+/* Debt Status */
+.debt-status {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .dashboard-summary {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .card p {
+        font-size: 1.2rem;
+    }
+
+    .table th,
+    .table td {
+        font-size: 0.8rem;
+    }
+}

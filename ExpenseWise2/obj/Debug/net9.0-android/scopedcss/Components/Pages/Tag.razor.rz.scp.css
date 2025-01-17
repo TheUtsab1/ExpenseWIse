@@ -1,0 +1,187 @@
+body[b-mapodgywib]
+{
+}
+/* Container Styles */
+.container[b-mapodgywib] {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #002db3;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-body[b-mapodgywib] {
+    background-color: #002db3;
+    color: white;
+}
+
+/* Title */
+.card-title[b-mapodgywib] {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Form Group Styling */
+.form-group[b-mapodgywib] {
+    margin-bottom: 20px;
+}
+
+.form-control[b-mapodgywib] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+    .form-control:focus[b-mapodgywib] {
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+    }
+
+/* Button Styling */
+.btn-primary[b-mapodgywib] {
+    width: 100%;
+    background-color: #8136ec;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-primary:hover[b-mapodgywib] {
+        background-color: #656466;
+        transform: translateY(-2px);
+    }
+
+/* Badge Styling for Tags */
+.badge[b-mapodgywib] {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 1rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+    .badge .btn-close[b-mapodgywib] {
+        background: transparent;
+        border: none;
+        font-size: 1.2rem;
+        color: black;
+        cursor: pointer;
+        margin-left: 8px;
+    }
+
+        .badge .btn-close:hover[b-mapodgywib] {
+            color: #d9534f;
+        }
+
+/* No tags available message */
+.no-tags-message[b-mapodgywib] {
+    text-align: center;
+    color: #f8f9fa;
+    font-size: 1.2rem;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Overlay */
+.modal-overlay[b-mapodgywib] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dialog[b-mapodgywib] {
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn-b-mapodgywib 0.3s ease-out;
+}
+
+.modal-header[b-mapodgywib], .modal-footer[b-mapodgywib] {
+    padding: 15px;
+    background-color: #0056b3;
+    color: white;
+}
+
+.modal-title[b-mapodgywib] {
+    font-size: 1.5rem;
+}
+
+.modal-body[b-mapodgywib] {
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.modal-footer button[b-mapodgywib] {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .btn-secondary[b-mapodgywib] {
+    background-color: #aaa;
+    color: white;
+}
+
+    .modal-footer .btn-secondary:hover[b-mapodgywib] {
+        background-color: #888;
+    }
+
+.modal-footer .btn-primary[b-mapodgywib] {
+    background-color: #0056b3;
+    color: white;
+}
+
+    .modal-footer .btn-primary:hover[b-mapodgywib] {
+        background-color: #0043a4;
+    }
+
+/* Animations */
+@keyframes modalFadeIn-b-mapodgywib {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,104 @@
+﻿@page "/home"
+@using System.Linq;
+@using System.Diagnostics;
+@using System.Text.Json;
+@using ExpenseWise2.Components.Model;
+@using ExpenseWise2.Components.Service;
+
+<body>
+    <div class="dashboard-container">
+        <h1>Dashboard</h1>
+        <div class="dashboard-summary">
+            <div class="card">
+                <h3>Total Income</h3>
+                <p>@totalIncome.ToString("C")</p>
+            </div>
+            <div class="card">
+                <h3>Balance</h3>
+                <p>@balance.ToString("C")</p>
+            </div>
+            <div class="card">
+                <h3>Total Expense</h3>
+                <p>@totalExpense.ToString("C")</p>
+            </div>
+            <div class="card">
+                <h3>Total Debt</h3>
+                <p>@totalDebt.ToString("C")</p>
+            </div>
+        </div>
+
+        <div class="transaction-details">
+            <h2>Your top 5 transactions</h2>
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Tag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var transaction in topTransactions)
+                    {
+                        <tr>
+                            <td>@transaction.Type.ToString()</td>
+                            <td>@transaction.Title</td>
+                            <td>@transaction.Date.ToShortDateString()</td>
+                            <td>@transaction.Amount.ToString("C")</td>
+                            <td>@transaction.Tag</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="debt-status mt-3">
+            <h4>Your Debt Status</h4>
+            <p>@GetDebtStatusMessage()</p>
+        </div>
+    </div>
+</body>
+
+@code {
+    private double totalIncome = 0;
+    private double totalExpense = 0;
+    private double totalDebt = 0;
+    private double balance = 0;
+
+    private List<TransactionModel> topTransactions = new();  // Single list for all top transactions
+    // private List<TransactionModel> totalDebtList = new();
+
+    protected override void OnInitialized()
+    {
+        // Get total income, expense, and debt by filtering transaction types
+        totalIncome = TransactionService.GetTotal(TransactionType.Income);
+        totalExpense = TransactionService.GetTotal(TransactionType.Expense);
+        totalDebt = TransactionService.GetTotal(TransactionType.Debt);
+        balance = TransactionService.GetBalance();
+        // totalDebtList = TransactionService.GetTransactions(TransactionType.Debt);
+
+        // Get all transactions
+        var transactions = TransactionService.GetTransactions();
+
+        // Merge all transactions into a single list and order by amount
+        topTransactions = transactions
+            .OrderByDescending(t => t.Amount)  // Order all transactions by amount descending
+            .Take(5)  // Only take top 5 from all transaction types
+            .ToList();
+    }
+
+    private string GetDebtStatusMessage()
+    {
+        if (totalDebt > 0)
+        {
+            return $"You have {totalDebt.ToString("C")} debt pending.";
+        }
+        else
+        {
+            return "You have 0 debt pending.";
+        }
+    }
+    
+}

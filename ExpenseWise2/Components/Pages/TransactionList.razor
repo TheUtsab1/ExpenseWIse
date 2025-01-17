@@ -1,0 +1,386 @@
+﻿@page "/transactionList"
+
+@using ExpenseWise2.Components.Model;
+@using ExpenseWise2.Components.Service;
+@using System.Diagnostics;
+@using System.Text.Json;
+
+<body>
+    <div class="dashboard-container">
+        <h1>Transaction List</h1>
+        <div class="dashboard-summary">
+            <div class="card">
+                <h5>Total Transactions:</h5>
+                <p>@totalNumberTransaction</p>
+            </div>
+            <div class="card">
+                <h5>Total Transaction Amount:</h5>
+                <p>@totalTransactionAmount.ToString("C")</p>
+            </div>
+            <div class="card">
+                <h5>Total Number of Income:</h5>
+                <p>@totalNumberIncome</p>
+            </div>
+            <div class="card">
+                <h5>Total Number of Expense:</h5>
+                <p>@totalNumberExpense</p>
+            </div>
+            <div class="card">
+                <h5>Total Number of Debt:</h5>
+                <p>@totalNumberDebt</p>
+            </div>
+            <div class="card">
+                <h5>Highest Income:</h5>
+                <p>@highestInflow?.Title - @highestInflow?.Amount.ToString("C")</p>
+                <h5>Lowest Income:</h5>
+                <p>@lowestInflow?.Title - @lowestInflow?.Amount.ToString("C")</p>
+            </div>
+            <div class="card">
+                <h5>Highest Expense:</h5>
+                <p>@highestOutflow?.Title - @highestOutflow?.Amount.ToString("C")</p
+                <h5>Lowest Expense:</h5>
+                <p>@lowestOutflow?.Title - @lowestOutflow?.Amount.ToString("C")</p>
+            </div>
+            <div class="card">
+                <h5>Highest Debt:</h5>
+                <p>@highestDebt?.Title - @highestDebt?.Amount.ToString("C")</p>
+                <h5>Lowest Debt:</h5>
+                <p>@lowestDebt?.Title - @lowestDebt?.Amount.ToString("C")</p>
+            </div>
+        </div>
+
+
+        <!-- Filter Section -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 mb-3">
+                        <input type="text" class="form-control" placeholder="Search title..." @bind="searchTitle" @bind:event="oninput" />
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <select class="form-select" @bind="selectedType">
+                            <option value="">All Types</option>
+                            @foreach (var type in Enum.GetValues(typeof(TransactionType)))
+                            {
+                                <option value="@type">@type</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <select class="form-select" @bind="amountFilterType">
+                            <option value="">Amount Filter</option>
+                            <option value="lowest">Lowest First</option>
+                            <option value="highest">Highest First</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <input type="text" class="form-control" placeholder="Search tags..." @bind="searchTag" @bind:event="oninput" />
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <input type="date" class="form-control" @bind="startDate" />
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <input type="date" class="form-control" @bind="endDate" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transaction Table -->
+        @if (FilteredTransactions.Any())
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th @onclick="() => SortBy(nameof(TransactionModel.Title))">
+                            Title @GetSortIcon(nameof(TransactionModel.Title))
+                        </th>
+                        <th @onclick="() => SortBy(nameof(TransactionModel.Amount))">
+                            Amount @GetSortIcon(nameof(TransactionModel.Amount))
+                        </th>
+                        <th @onclick="() => SortBy(nameof(TransactionModel.Type))">
+                            Type @GetSortIcon(nameof(TransactionModel.Type))
+                        </th>
+                        <th @onclick="() => SortBy(nameof(TransactionModel.Date))">
+                            Date @GetSortIcon(nameof(TransactionModel.Date))
+                        </th>
+                        <th @onclick="() => SortBy(nameof(TransactionModel.DueDate))">
+                            Due Date @GetSortIcon(nameof(TransactionModel.DueDate))
+                        </th>
+                        <th>Note</th>
+                        <th>Source</th>
+                        <th @onclick="() => SortBy(nameof(TransactionModel.Tag))">
+                            Tag @GetSortIcon(nameof(TransactionModel.Tag))
+                        </th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var transaction in FilteredTransactions)
+                    {
+                        <tr>
+                            <td>@transaction.Title</td>
+                            <td>@transaction.Amount.ToString("C")</td>
+                            <td>@transaction.Type</td>
+                            <td>@transaction.Date.ToShortDateString()</td>
+                            <td>@transaction.DueDate.ToShortDateString()</td>
+                            <td>@transaction.Note</td>
+                            <td>@(string.IsNullOrWhiteSpace(transaction.Source) ? "N/A" : transaction.Source)</td>
+                            <td>@(string.IsNullOrWhiteSpace(transaction.Tag) ? "N/A" : transaction.Tag)</td>
+                            <td>
+                                @if (transaction.Type == TransactionType.Debt && !transaction.IsCleared)
+                                {
+                                    <button class="btn btn-primary" @onclick="() => clearDebt(transaction.Id)">Clear</button>
+                                }
+                                else if (transaction.Type == TransactionType.Debt && transaction.IsCleared)
+                                {
+                                    <span class="text-success">Cleared</span>
+                                }
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p class="text-center">No transactions found.</p>
+        }
+    </div>
+</body>
+
+
+@code {
+    private List<TransactionModel> AllTransactions = new();
+    private string searchTitle = "";
+    private string searchTag = "";
+    private string selectedType = "";
+    private string amountFilterType = "";
+    private DateTime? startDate;
+    private DateTime? endDate;
+    private string currentSortColumn = "";
+    private bool isAscending = true;
+
+    private int totalNumberTransaction = 0;
+    private int totalNumberIncome = 0;
+    private int totalNumberExpense = 0;
+    private int totalNumberDebt = 0;
+
+    private double totalTransactionAmount = 0;
+
+    private TransactionModel highestInflow;
+    private TransactionModel lowestInflow;
+
+    private TransactionModel highestOutflow;
+    private TransactionModel lowestOutflow;
+
+    private TransactionModel highestDebt;
+    private TransactionModel lowestDebt;
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+            AllTransactions = TransactionService.GetTransactions();
+
+            totalNumberTransaction = AllTransactions.Count();
+            totalNumberIncome = TransactionService.GetTransactions(TransactionType.Income).Count;
+            totalNumberExpense = TransactionService.GetTransactions(TransactionType.Expense).Count;
+            totalNumberDebt = TransactionService.GetTransactions(TransactionType.Debt).Count;
+
+            // Calculate total transaction amount (inflows + debts - outflows)
+            totalTransactionAmount = AllTransactions
+                .Where(t => t.Type == TransactionType.Income || t.Type == TransactionType.Debt)
+                .Sum(t => t.Amount) - AllTransactions
+                .Where(t => t.Type == TransactionType.Expense)
+                .Sum(t => t.Amount);
+
+            // Calculate highest/lowest inflow, outflow, and debt
+            highestInflow = AllTransactions
+                .Where(t => t.Type == TransactionType.Income)
+                .OrderByDescending(t => t.Amount)
+                .FirstOrDefault();
+
+            lowestInflow = AllTransactions
+                .Where(t => t.Type == TransactionType.Income)
+                .OrderBy(t => t.Amount)
+                .FirstOrDefault();
+
+            highestOutflow = AllTransactions
+                .Where(t => t.Type == TransactionType.Expense)
+                .OrderByDescending(t => t.Amount)
+                .FirstOrDefault();
+
+            lowestOutflow = AllTransactions
+                .Where(t => t.Type == TransactionType.Expense)
+                .OrderBy(t => t.Amount)
+                .FirstOrDefault();
+
+            highestDebt = AllTransactions
+                .Where(t => t.Type == TransactionType.Debt)
+                .OrderByDescending(t => t.Amount)
+                .FirstOrDefault();
+
+            lowestDebt = AllTransactions
+                .Where(t => t.Type == TransactionType.Debt)
+                .OrderBy(t => t.Amount)
+                .FirstOrDefault();
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"Error loading transactions: {ex.Message}");
+        }
+    }
+
+
+    private List<TransactionModel> FilteredTransactions
+    {
+        get
+        {
+            var filtered = AllTransactions.AsEnumerable();
+
+            // Apply title filter
+            if (!string.IsNullOrWhiteSpace(searchTitle))
+            {
+                filtered = filtered.Where(t => t.Title.Contains(searchTitle, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Apply type filter
+            if (!string.IsNullOrWhiteSpace(selectedType))
+            {
+                if (Enum.TryParse<TransactionType>(selectedType, out var type))
+                {
+                    filtered = filtered.Where(t => t.Type == type);
+                }
+            }
+
+            // Apply amount filter
+            if (!string.IsNullOrWhiteSpace(amountFilterType))
+            {
+                filtered = amountFilterType switch
+                {
+                    "lowest" => filtered.OrderBy(t => t.Amount),
+                    "highest" => filtered.OrderByDescending(t => t.Amount),
+                    _ => filtered
+                };
+            }
+
+            // Apply tag filter
+            if (!string.IsNullOrWhiteSpace(searchTag))
+            {
+                filtered = filtered.Where(t => t.Tag != null && t.Tag.Contains(searchTag, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Apply date range filter
+            if (startDate.HasValue)
+            {
+                filtered = filtered.Where(t => t.Date.Date >= startDate.Value.Date);
+            }
+            if (endDate.HasValue)
+            {
+                filtered = filtered.Where(t => t.Date.Date <= endDate.Value.Date);
+            }
+
+            // Apply sorting (only if amount filter is not active)
+            if (!string.IsNullOrEmpty(currentSortColumn) && string.IsNullOrEmpty(amountFilterType))
+            {
+                filtered = ApplySort(filtered, currentSortColumn);
+            }
+
+            return filtered.ToList();
+        }
+    }
+
+    private void SortBy(string columnName)
+    {
+        // Clear amount filter when sorting by other columns
+        if (columnName == nameof(TransactionModel.Amount))
+        {
+            amountFilterType = "";
+        }
+
+        if (currentSortColumn == columnName)
+        {
+            isAscending = !isAscending;
+        }
+        else
+        {
+            currentSortColumn = columnName;
+            isAscending = true;
+        }
+    }
+
+    private string GetSortIcon(string columnName)
+    {
+        if (currentSortColumn != columnName)
+            return "↕";
+
+        return isAscending ? "↑" : "↓";
+    }
+
+    private IEnumerable<TransactionModel> ApplySort(IEnumerable<TransactionModel> transactions, string columnName)
+    {
+        return columnName switch
+        {
+            nameof(TransactionModel.Title) => isAscending
+                ? transactions.OrderBy(t => t.Title)
+                : transactions.OrderByDescending(t => t.Title),
+            nameof(TransactionModel.Amount) => isAscending
+                ? transactions.OrderBy(t => t.Amount)
+                : transactions.OrderByDescending(t => t.Amount),
+            nameof(TransactionModel.Type) => isAscending
+                ? transactions.OrderBy(t => t.Type)
+                : transactions.OrderByDescending(t => t.Type),
+            nameof(TransactionModel.Date) => isAscending
+                ? transactions.OrderBy(t => t.Date)
+                : transactions.OrderByDescending(t => t.Date),
+            nameof(TransactionModel.DueDate) => isAscending
+                ? transactions.OrderBy(t => t.DueDate)
+                : transactions.OrderByDescending(t => t.DueDate),
+            nameof(TransactionModel.Tag) => isAscending
+                ? transactions.OrderBy(t => t.Tag)
+                : transactions.OrderByDescending(t => t.Tag),
+            _ => transactions
+        };
+    }
+
+    private void clearDebt(string ID)
+    {
+        try
+        {
+            var transaction = AllTransactions.FirstOrDefault(t => t.Id == ID);
+            if (transaction != null)
+            {
+                var balance = TransactionService.GetBalance();
+                Debug.WriteLine("Balance" + balance);
+                if (balance < transaction.Amount)
+
+            {
+                Debug.WriteLine("Insufficient balance to clear debt.");
+                return;
+            }
+
+            transaction.IsCleared = true;
+
+            // Save changes to the JSON file
+            File.WriteAllText(Util.TRANSACTION, JsonSerializer.Serialize(AllTransactions));
+
+            Debug.WriteLine($"Transaction {ID} marked as cleared.");
+
+            // Notify UI to update
+            StateHasChanged();
+        }
+        else
+        {
+            Debug.WriteLine($"Transaction {ID} not found.");
+        }
+    }
+    catch (Exception ex)
+    {
+        Debug.WriteLine($"Error in clearDebt: {ex.Message}");
+    }
+}
+
+
+}

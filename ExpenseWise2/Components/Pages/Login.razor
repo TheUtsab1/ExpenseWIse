@@ -1,0 +1,75 @@
+﻿@page "/"
+
+
+@inject NavigationManager NavigationMgr
+@using System.Diagnostics
+
+<body>
+    <div class="container">
+        <h1>EXPENSEWISE</h1>
+        <form @onsubmit="LoginHandler">
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input @bind="Username" type="text" id="username" placeholder="Username"  />
+            </div>
+
+            <div class="input-container">
+                <label for="password">Password</label>
+                <input @bind="Password" type="password"
+                       id="password"
+                       placeholder="Password"
+                        />
+            </div>
+
+            <div class="input-container">
+                <label for="currency-selector">Select Currency</label>
+                <select @bind="CurrencySelector" id="currency-selector" name="currency">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="NPR">NPR - Nepalese Rupee</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="AUD">AUD - Australian Dollar</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    <option value="CNY">CNY - Chinese Yuan</option>
+                </select>
+            </div>
+
+            @if (!isCorrect)
+            {
+                <p> Invalid Username or Password!! </p>
+            }
+
+            <button type="submit" class="btn-login">LOGIN</button>
+        </form>
+    </div>
+</body>
+
+
+
+@code {
+    private string Username { get; set; }
+    private string Password { get; set; }
+    private string CurrencySelector { get; set; }
+
+
+    private bool isCorrect { get; set; } = true;
+
+    private void LoginHandler()
+    {
+
+        if (Username == "utsab" && Password == "devkota")
+        {
+            Util.ISAUTHENTICATED = true;
+            Debug.WriteLine("Login Successful!");
+            NavigationMgr.NavigateTo("/home");
+        }
+        else
+        {
+            Debug.WriteLine("Invalid Username or Password.");
+            Util.ISAUTHENTICATED = false;
+            isCorrect = false;
+        }
+
+    }
+}
